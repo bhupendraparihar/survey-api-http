@@ -1,0 +1,137 @@
+<html>
+
+<head>
+    <style>
+        #poll-list-app .btn {
+            background: #3498db;
+            background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+            background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+            background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+            background-image: -o-linear-gradient(top, #3498db, #2980b9);
+            background-image: linear-gradient(to bottom, #3498db, #2980b9);
+            -webkit-border-radius: 6;
+            -moz-border-radius: 6;
+            border-radius: 6px;
+            font-family: Arial;
+            color: #ffffff;
+            font-size: 17px;
+            padding: 8px 20px 8px 20px;
+            text-decoration: none;
+        }
+        
+        #poll-list-app .btn:hover {
+            background: #3cb0fd;
+            background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+            background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+            background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+            background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+            background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+            text-decoration: none;
+        }
+        
+        #poll-list-app .btn-secondary {
+            background: #7b848a;
+            background-image: -webkit-linear-gradient(top, #7b848a, #414547);
+            background-image: -moz-linear-gradient(top, #7b848a, #414547);
+            background-image: -ms-linear-gradient(top, #7b848a, #414547);
+            background-image: -o-linear-gradient(top, #7b848a, #414547);
+            background-image: linear-gradient(to bottom, #7b848a, #414547);
+            -webkit-border-radius: 6;
+            -moz-border-radius: 6;
+            border-radius: 6px;
+            font-family: Arial;
+            color: #ffffff;
+            font-size: 17px;
+            padding: 10px 20px 10px 20px;
+            text-decoration: none;
+        }
+        
+        #poll-list-app .btn-secondary:hover {
+            background: #131617;
+            background-image: -webkit-linear-gradient(top, #131617, #000000);
+            background-image: -moz-linear-gradient(top, #131617, #000000);
+            background-image: -ms-linear-gradient(top, #131617, #000000);
+            background-image: -o-linear-gradient(top, #131617, #000000);
+            background-image: linear-gradient(to bottom, #131617, #000000);
+            text-decoration: none;
+        }
+        
+        #poll-list-app {
+            height: 300px;
+            background-color: #CCC;
+            width: 100%;
+            padding: 10px;
+            font-family: Arial;
+        }
+        
+        #poll-list-app h2 {
+            padding: 0;
+            margin: 0;
+        }
+        
+        #poll-list-app #pollListEntries {
+            margin: 10px;
+        }
+        
+        #poll-list-app .create-new-button,
+        #poll-list-app .submit-poll {
+            text-align: right;
+            padding-right: 10px;
+            padding-top: 10px;
+        }
+        
+        #poll-list-app.organizer .poll-list {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="poll-list-app">
+        <div class="poll-list" id="pollListSection">
+            <div class="create-new-button">
+                <span class="btn" value="New" onclick="pollOrganizer.createNewPoll()">Create New</span>
+            </div>
+            <table id="pollListEntries"></table>
+        </div>
+        <div class="create-poll" id="createPollSection">
+            <div class="poll-header">
+                <h2>Create New Poll</h2>
+            </div>
+            <div class="poll-statement">
+                <textarea name="pollStatement" id="pollStatement" cols="30" rows="10" placeholder="Type poll statement"></textarea>
+            </div>
+            <div class="poll-options">
+                <ul>
+                    <li><input type="text" placeholder="Provide options"></li>
+                    <li><input type="text" placeholder="Provide options"></li>
+                </ul>
+            </div>
+            <div class="submit-poll">
+                <span class="btn" onclick="pollOrganizer.submitNewPoll()">Submit</span>
+                <span class="btn-secondary" onclick="pollOrganizer.cancelNewPoll()">Cancel</span>
+            </div>
+        </div>
+        <div class="show-poll" id="showPollSection">
+            <div class="poll-header">
+                <h2>Poll</h2>
+            </div>
+            <div class="poll-statement">
+
+            </div>
+            <div class="poll-options">
+                <ul>
+                    <li><input type="text" disabled></li>
+                    <li><input type="text" disabled></li>
+                </ul>
+            </div>
+            <div class="submit-poll">
+                <span class="btn-secondary" onclick="pollOrganizer.showPollList()">Back</span>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>

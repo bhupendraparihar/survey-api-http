@@ -1,0 +1,91 @@
+#poll-list-app .btn {
+    height: auto;
+ }
+ 
+ #poll-list-app {
+     height: 300px;
+     width: 100%;
+     padding: 10px;
+     font-family: "Helvetica Neue", "Segoe UI", Helvetica, Arial, "Lucida Grande", sans-serif;
+ }
+ 
+ #poll-list-app #pollStatement{
+     width: 100%;
+     height: 60px;
+ }
+ #poll-list-app .poll-options input{
+     margin-left: 5px;
+ }
+ 
+ #poll-list-app .poll-options div{
+     margin-top: 5px;
+ }
+ 
+ #poll-list-app .poll-header {
+     font-size: 20px;
+ }
+ 
+ #poll-list-app #pollListEntries {
+     margin: 10px;
+ }
+ 
+ #poll-list-app .create-new-button,
+ #poll-list-app .submit-poll {
+     text-align: right;
+     padding-top: 10px;
+ }
+ 
+ #poll-list-app.organizer .poll-list {
+     display: none;
+ }
+ 
+ #pollResult {
+     margin-top: 15px;
+ }
+ .poll-result-success-header {
+     font-size: 17px;
+     padding: 8px 0;
+ }
+ .poll-result-failure {
+     padding: 8px 0;
+     font-size: 16px;
+ }
+ #pollResult span.text {
+     display: inline-block;
+     max-width: 250px;
+     overflow: hidden;
+     text-overflow: ellipsis;
+ }
+ #pollResult span.count {
+     padding-left: 10px;
+     display: inline-block;
+     vertical-align: top;
+     font-weight: 500;
+ }
+ #pollListEntries td:hover {
+     cursor: default;
+     color: #0074ce;
+ }
+ #pollViewer .poll-options label {
+     padding-left: 8px;
+     vertical-align: top;
+     font-size: 15px;
+     font-weight: 500;
+     max-width: 290px;
+     word-wrap: break-word;
+     max-height: 61px;
+     overflow: auto;
+ }
+ #pollViewer .poll-question {
+     font-size: 16px;
+     font-weight: 600;
+     overflow: auto;
+     max-height: 100px;
+ }
+ #pollViewer .submit-poll {
+     text-align: center;
+     padding: 6px;
+     font-size: 16px;
+     font-weight: 500;
+     margin-top: 10px;
+ }
